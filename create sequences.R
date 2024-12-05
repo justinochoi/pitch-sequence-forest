@@ -80,7 +80,7 @@ model_data <-
   rename_all(., ~sub('V', paste('pitch'), names(model_data))) %>% 
   mutate(across(pitch1:pitch9, .fns = factor)) 
 
-# Best first pitch '
+# Best one-pitch sequences
 one_pitch <- 
   test %>% 
   filter(seq_length >= 1) %>% 
